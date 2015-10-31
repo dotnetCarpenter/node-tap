@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+console.log("run.js\tpid: ", process.pid)
 var args = process.argv.slice(2)
 
 var fs = require('fs')

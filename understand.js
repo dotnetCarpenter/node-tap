@@ -8,7 +8,7 @@ const node = process.execPath
 const args = [nycBin, 'report', '--reporter', coverageReport]
 let child, services
 
-console.log("run.js\tpid: ", process.pid)
+console.log("understand.js\tpid: ", process.pid)
 child = spawn(node, args, {
   stdio: ['ignore', 'pipe', 'pipe'],
 })
