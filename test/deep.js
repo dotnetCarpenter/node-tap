@@ -70,3 +70,11 @@ test("deepEquals shouldn't blow up on circular data structures", function (t) {
   t.deepEquals(x1, x2)
   t.end()
 })
+
+test("deepEqual shouldn't fail when objects contain anonymous functions", function(t) {
+  var a = { val: 5, ano: function() { return val } }
+  var b = { val: 5, ano: function() { return val } }
+  
+  t.deepEquals(a, a)
+  t.end()
+})
